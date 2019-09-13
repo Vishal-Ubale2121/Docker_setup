@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% include 'navbar.html' %}
+{% block content %}
+ {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+<center>
+
+    <body style="background-color:#B9A9E6">
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>
+
+</head>  
+<body>  
+<form method="POST" class="post-form" action="/emp">
+        {% csrf_token %}
+    <div class="container">  
+<br>
+
+    <div class="form-group">
+    <label class="col-sm-4 col-form-label"></label>
+    <div class="col-sm-4">
+    <h2>Patient Details</h2>
+    </div>  
+  </div>
+<br>
+        <br>
+        <br>
+
+    <div class="form-inline">
+    <label class="col-sm-4 col-form-label">Full Name:</label>
+    <div class="col-sm-4">  
+      {{ form.name }}
+    </div>  
+  </div>
+
+
+        <br>
+        <br>
+
+  <div class="form-inline">
+    <label class="col-sm-4 col-form-label">Mobile No:</label>
+    <div class="col-sm-4">
+      {{ form.mno }}
+    </div>
+  </div>
+
+        <br>
+        <br>
+
+        <div class="form-inline">
+    <label class="col-sm-4 col-form-label">Test:</label>
+    <div class="col-sm-4">
+      {{ form.test }}
+    </div>
+  </div>
+
+
+        <br>
+        <br>
+
+        <div class="form-inline">
+    <label class="col-sm-4 col-form-label">Amount:</label>
+    <div class="col-sm-4">
+      {{ form.amt }}
+    </div>
+  </div>
+
+
+        <br>
+        <br>
+
+             <div class="form-inline">
+    <label class="col-sm-4 col-form-label">Refrenced Doctor:</label>
+    <div class="col-sm-4">
+      {{ form.dr }}
+    </div>
+  </div>
+<br>
+        <br>
+    <div class="form-inline">
+    <label class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-4">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+    </div>  
+</form>
+
+</body>
+{% endblock %}
+</html>
+    </center>

@@ -1,0 +1,9 @@
+ .idea/
+        Dockerfile
+        core/
+        db.sqlite3
+        docker-compose.yml
+        m2121/
+        manage.py
+        mysite/
+        requirements.txt
